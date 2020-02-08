@@ -26,6 +26,7 @@ public class ServiceTestSuite extends BaseTest {
     }
     @Test
     @DisplayName("get publisher readings OUTLIER, verify number is valid")
+    // a mock tests - tests the api service ( getOutlierById ) reponse,  against the test data function ( getLargestNum)
     public void getPublisherReadingsOutlier(TestInfo testInfo) throws Exception {
 
         int publisherTestIndex = 1;
@@ -36,7 +37,6 @@ public class ServiceTestSuite extends BaseTest {
         test.log(LogStatus.PASS, "get publisher readings OUTLIER", "number is valid");
     }
     @Test
-
     @DisplayName("get readings OUTLIER per invalid publisher id, verify return is null")
     public void getInvalidPublisherReadingsOutlier() throws Exception {
         int publisherTestNum = 0;
@@ -46,6 +46,7 @@ public class ServiceTestSuite extends BaseTest {
     }
     @Test
     @DisplayName("get publisher readings OUTLIER accorging to last-n-readings, verify number is valid")
+    // a mock tests - tests the api service ( getOutlierById, last_n_readings ) reponse,  against the test data function ( !=null)
     public void getPuplisherReadingOutlier_last_n_readings() throws Exception {
         int publisherTestIndex = 1;
         PublisherTest publisherTest = testData.getPublisherTest(publisherTestIndex);
